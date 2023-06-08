@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #B0B0B0;
+    padding: 10px;
+}
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 0px;
+    border-radius: 10px;
+}
+.todo-app h2{
+    color: #002765;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 10px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 18px;
+}
+
+hr{
+    border: 0.01px solid #F0F0F0;
+}
+.last-hr{
+    margin-top: 50px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 19px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+ul li:hover{
+    background-color: #edeef0;
+    border-radius: 10px;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    background-image: url(images/unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 13px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    position: absolute;
+    background-image: url(images/checked.png);
+    width: 40px;
+    left: -1px;
+}
+
+ul li span{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 40px;
+    height: 46px;
+    font-size: 25px;
+    color: #ff0000;
+    line-height: 45px;
+    text-align: center;
+    border-radius: 15%;
+}
+ul li span:hover{
+    background: #ffafaf;
+
+}
+
+.task-count{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.task-count div{
+    display: inline-flex;
+}
+.task-count p{
+    color: #B0B0B0;
+    font-size: 15px;
+}
